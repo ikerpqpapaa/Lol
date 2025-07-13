@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple P12 Certificate Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <i class="fas fa-certificate header-icon"></i>
+                <h1>Apple P12 Certificate Manager</h1>
+                <p>Manage and download your Apple certificates</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search certificates by name, type, or bundle ID...">
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <span class="stat-number" id="totalCerts">0</span>
+                        <span class="stat-label">Active Certificates</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <span class="stat-number" id="expiringSoon">0</span>
+                        <span class="stat-label">Expiring Soon</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certificates-grid" id="certificatesGrid">
+                <!-- Certificates will be loaded here -->
+            </div>
+
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <span>Loading certificates...</span>
+            </div>
+
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No certificates found</h3>
+                <p>Try adjusting your search criteria</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
